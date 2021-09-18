@@ -27,17 +27,21 @@ jobs:
 
 This action accepts a couple of optional inputs:
 
-| Input Name             | Required? | Default | Description                                                            |
-| ---------------------- | :-------: | :-----: | ---------------------------------------------------------------------- |
-| `args`                 |    No     |  `""`   | Arguments to pass to the Eleventy invocation                           |
-| `install_dependencies` |    No     | `false` | If set to `true`, `npm install` will be run before Eleventy is invoked |
+| Input Name             | Required? | Default    | Description                                                            |
+| ---------------------- | :-------: | :-----:    | ---------------------------------------------------------------------- |
+| `args`                 |    No     |  `""`      | Arguments to pass to the Eleventy invocation                           |
+| `install_dependencies` |    No     | `false`    | If set to `true`, `npm install` will be run before Eleventy is invoked |
+| `working_directory`    |    No     | `"."`      | Working directory in which to run Eleventy                             |
+| `version`              |    No     | `"0.12.1"` | Version of Eleventy to install                                         |
 
 For example:
 
 ```yaml
 - name: Build
-  uses: TartanLlama/actions-eleventy@v1.1
+  uses: y-wenl/actions-eleventy@v1.1
   with:
     args: --output _dist
     install_dependencies: true
+    working_directory: my_site
+    version: 1.0.0-canary.41
 ```

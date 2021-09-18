@@ -9,6 +9,10 @@ inputs:
     description: 'Working directory in which to run Eleventy'
     required: false
     default: "."
+  version:
+    description: 'Version of Eleventy to install'
+    required: false
+    default: "0.12.1"
   install_dependencies:
     description: 'If set to `true`, `npm install` will be run before Eleventy is invoked'
     required: false
