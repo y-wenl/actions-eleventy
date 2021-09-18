@@ -1,6 +1,6 @@
 # GitHub Action for Eleventy
 
-Use this action to build your static website with [Eleventy](https://www.11ty.io/).
+Use this action to build your static website with [Eleventy](https://www.11ty.io/), version 1.0.0-canary.41.
 
 To use it, create a `.github/workflows/eleventy_build.yml` file which [uses this repository](https://help.github.com/en/articles/workflow-syntax-for-github-actions#jobsjob_idsteps) as an action.
 
@@ -32,7 +32,6 @@ This action accepts a couple of optional inputs:
 | `args`                 |    No     |  `""`      | Arguments to pass to the Eleventy invocation                           |
 | `install_dependencies` |    No     | `false`    | If set to `true`, `npm install` will be run before Eleventy is invoked |
 | `working_directory`    |    No     | `"."`      | Working directory in which to run Eleventy                             |
-| `version`              |    No     | `"0.12.1"` | Version of Eleventy to install                                         |
 
 For example:
 
@@ -43,5 +42,4 @@ For example:
     args: --output _dist
     install_dependencies: true
     working_directory: my_site
-    version: 1.0.0-canary.41
 ```
