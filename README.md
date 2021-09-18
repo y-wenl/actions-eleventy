@@ -1,6 +1,6 @@
 # GitHub Action for Eleventy
 
-Use this action to build your static website with [Eleventy](https://www.11ty.io/), version 1.0.0-canary.41.
+Use this action to build your static website with [Eleventy](https://www.11ty.io/), version 1.0.0-canary.44.
 
 To use it, create a `.github/workflows/eleventy_build.yml` file which [uses this repository](https://help.github.com/en/articles/workflow-syntax-for-github-actions#jobsjob_idsteps) as an action.
 
@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Build
-        uses: TartanLlama/actions-eleventy@v1.1
+        uses: y-wenl/actions-eleventy@main
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v1.1.0
         env:
